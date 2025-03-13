@@ -68,9 +68,9 @@ def load_player_data(cpm):
         data = response.get('data')
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
         
-            print(Colorate.Horizontal(Colors.purple_to_blue, '==========[ PLAYER DETAILS ]=========='))
+            print(Colorate.Horizontal(Colors.red, '==========[ PLAYER DETAILS ]=========='))
             
-            print(Colorate.Horizontal(Colors.blue_to_white, f'Name   : {(data.get("Name") if "Name" in data else "UNDEFINED")}.'))
+            print(Colorate.Horizontal(Colors.white, f'Name   : {(data.get("Name") if "Name" in data else "UNDEFINED")}.'))
                 
             print(Colorate.Horizontal(Colors.rainbow, f'LocalID: {data.get("localID")}.'))
             
