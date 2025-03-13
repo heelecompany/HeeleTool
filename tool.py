@@ -16,7 +16,7 @@ from heeletool import HeeleCompany
 
 brand_name = "Heele"  # Название бренда
 __CHANNEL_USERNAME__ = "HeeleBot"
-__GROUP_USERNAME__   = "HeeleCpm Tool Channel"
+__GROUP_USERNAME__   = "Heele Tool"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -68,7 +68,7 @@ def load_player_data(cpm):
         data = response.get('data')
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
         
-            print(Colorate.Horizontal(Colors.rainbow, '==========[ PLAYER DETAILS ]=========='))
+            print(Colorate.Horizontal(Colors.purple_to_blue, '==========[ PLAYER DETAILS ]=========='))
             
             print(Colorate.Horizontal(Colors.rainbow, f'Name   : {(data.get("Name") if "Name" in data else "UNDEFINED")}.'))
                 
