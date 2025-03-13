@@ -12,10 +12,10 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 
-from heeletool import StoreInventore
+from heeletool import HeeleCompany
 
 brand_name = "Heele"  # Название бренда
-__CHANNEL_USERNAME__ = "HeeleToolBot"
+__CHANNEL_USERNAME__ = "HeeleBot"
 __GROUP_USERNAME__   = "HeeleCpm Tool Channel"
 
 def signal_handler(sig, frame):
@@ -143,7 +143,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
         console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
-        cpm = StoreInventore(acc_access_key)
+        cpm = HeeleCompany(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
