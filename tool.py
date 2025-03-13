@@ -16,7 +16,7 @@ from heeletool import HeeleCompany
 
 brand_name = "Heele"  # Название бренда
 __CHANNEL_USERNAME__ = "HeeleBot"
-__GROUP_USERNAME__   = "Heele Tool"
+__GROUP_USERNAME__   = "Heeletool"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -55,7 +55,7 @@ def banner(console):
 ]
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text)
-    print(Colorate.Horizontal(Colors.purple_to_blue, '\t    𝐏𝐋𝐄𝐀𝐒𝐄 𝐋𝐎𝐆𝐎𝐔𝐓 𝐅𝐑𝐎𝐌 𝐂𝐏𝐌 𝐁𝐄𝐅𝐎𝐑𝐄 𝐔𝐒𝐈𝐍𝐆 𝐓𝐇𝐈𝐒 𝐓𝐎𝐎𝐋'))
+    print(Colorate.Horizontal(Colors.purple_to_blue, '\t    ВЫЙДЕТЕ ИЗ АККАУНТА ПЕРЕД ИСПОЛЬЗОВАНИЕМ!'))
     print(Colorate.Horizontal(Colors.purple_to_blue, f' 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺: @{__CHANNEL_USERNAME__} 𝐎𝐫 @{__GROUP_USERNAME__}'))
     print(Colorate.Horizontal(Colors.purple_to_blue, f' '))
 
@@ -97,6 +97,7 @@ def load_key_data(cpm):
     print(Colorate.Horizontal(Colors.red_to_white, f'Telegram ID: {data.get("telegram_id")}.'))
     
     print(Colorate.Horizontal(Colors.red_to_white, f'Balance $  : {(data.get("coins") if not data.get("is_unlimited") else "Unlimited")}.'))
+    print(Colorate.Horizontal(Colors.red_to_white, '===============[ 𝐌𝐄𝐍𝐔 ]==============='))
         
     
 
@@ -108,14 +109,14 @@ def prompt_valid_value(content, tag, password=False):
         else:
             return value
             
-def load_client_details():
-    response = requests.get("http://ip-api.com/json")
-    data = response.json()
-    print(Colorate.Horizontal(Colors.red_to_white, '=============[ 𝐋𝐎𝐂𝐀𝐓𝐈𝐎𝐍 ]============='))
-    print(Colorate.Horizontal(Colors.red_to_white, f'Ip Address : {data.get("query")}.'))
-    print(Colorate.Horizontal(Colors.red_to_white, f'Location   : {data.get("city")} {data.get("regionName")} {data.get("countryCode")}.'))
-    print(Colorate.Horizontal(Colors.red_to_white, f'Country    : {data.get("country")} {data.get("zip")}.'))
-    print(Colorate.Horizontal(Colors.red_to_white, '===============[ 𝐌𝐄𝐍𝐔 ]==============='))
+#def load_client_details():
+#    response = requests.get("http://ip-api.com/json")
+#    data = response.json()
+#    print(Colorate.Horizontal(Colors.red_to_white, '=============[ 𝐋𝐎𝐂𝐀𝐓𝐈𝐎𝐍 ]============='))
+#    print(Colorate.Horizontal(Colors.red_to_white, f'Ip Address : {data.get("query")}.'))
+#    print(Colorate.Horizontal(Colors.red_to_white, f'Location   : {data.get("city")} {data.get("regionName")} {data.get("countryCode")}.'))
+#    print(Colorate.Horizontal(Colors.red_to_white, f'Country    : {data.get("country")} {data.get("zip")}.'))
+#    print(Colorate.Horizontal(Colors.red_to_white, '===============[ 𝐌𝐄𝐍𝐔 ]==============='))
 
 def interpolate_color(start_color, end_color, fraction):
     start_rgb = tuple(int(start_color[i:i+2], 16) for i in (1, 3, 5))
