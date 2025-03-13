@@ -194,8 +194,8 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.red_to_white, '{19}: Разблок. цветной дым     4K'))
             print(Colorate.Horizontal(Colors.red_to_white, '{20}: Разблок. диски           4K'))
             print(Colorate.Horizontal(Colors.red_to_white, '{21}: Получить все анимации    2K'))
-            print(Colorate.Horizontal(Colors.red_to_white, '{22}: Разблок. Equipaments M     3K'))
-            print(Colorate.Horizontal(Colors.red_to_white, '{23}: Разблок. Equipaments F     3K'))
+            print(Colorate.Horizontal(Colors.red_to_white, '{22}: Разблок. Equipaments M   3K'))
+            print(Colorate.Horizontal(Colors.red_to_white, '{23}: Разблок. Equipaments F   3K'))
             print(Colorate.Horizontal(Colors.red_to_white, '{24}: Изменить Race Win        1K'))
             print(Colorate.Horizontal(Colors.red_to_white, '{25}: Изменить Race Loses      1K'))
             print(Colorate.Horizontal(Colors.red_to_white, '{26}: Клон Аккаунта            7K'))
@@ -214,7 +214,7 @@ if __name__ == "__main__":
             elif service == 1: # Increase Money
                 print(Colorate.Horizontal(Colors.rainbow, '[?] Укажите, сколько денег вы хотите.'))
                 amount = IntPrompt.ask("[?] Amount")
-                console.print("[%] Saving your data: ", end=None)
+                console.print("[%] Сохраняю процесс: ", end=None)
                 if amount > 0 and amount <= 500000000:
                     if cpm.set_player_money(amount):
                         print(Colorate.Horizontal(Colors.rainbow, 'УСПЕШНО'))
@@ -235,7 +235,7 @@ if __name__ == "__main__":
             elif service == 2: # Increase Coins
                 print(Colorate.Horizontal(Colors.rainbow, '[?] Введите необходимое количество коинов.'))
                 amount = IntPrompt.ask("[?] Amount")
-                console.print("[%] Saving your data: ", end=None)
+                console.print("[%] Сохраняю процесс: ", end=None)
                 if amount > 0 and amount <= 500000:
                     if cpm.set_player_coins(amount):
                         print(Colorate.Horizontal(Colors.rainbow, 'УСПЕШНО'))
@@ -254,8 +254,8 @@ if __name__ == "__main__":
                     sleep(2)
                     continue
             elif service == 3: # King Rank
-                console.print("[bold red][!] Note:[/bold red]: если в игре не отображается звание короля, закройте ее и откройте несколько раз", end=None)
-                console.print("[bold red][!] Note:[/bold red]: пожалуйста, не получайте King Rank на одном аккаунте дважды.", end=None)
+                console.print("[bold red][!] Примичание:[/bold red]: если в игре не отображается звание короля, закройте ее и откройте несколько раз", end=None)
+                console.print("[bold red][!] Примичание:[/bold red]: пожалуйста, не получайте King Rank на одном аккаунте дважды.", end=None)
                 sleep(2)
                 console.print("[%] Даю вам звание короля: ", end=None)
                 if cpm.set_player_rank():
@@ -272,7 +272,7 @@ if __name__ == "__main__":
             elif service == 4: # Change ID
                 print(Colorate.Horizontal(Colors.rainbow, '[?] Введите свой новый ID.'))
                 new_id = Prompt.ask("[?] ID")
-                console.print("[%] Saving your data: ", end=None)
+                console.print("[%] Сохраняем процесс: ", end=None)
                 if len(new_id) >= 0 and len(new_id) <= 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 and (' ' in new_id) == False:
                     if cpm.set_player_localid(new_id.upper()):
                         print(Colorate.Horizontal(Colors.rainbow, 'УСПЕШНО'))
@@ -293,7 +293,7 @@ if __name__ == "__main__":
             elif service == 5: # Change Name
                 print(Colorate.Horizontal(Colors.rainbow, '[?] Введите ваше новое имя.'))
                 new_name = Prompt.ask("[?] Name")
-                console.print("[%] Saving your data: ", end=None)
+                console.print("[%] Сохраняем процесс: ", end=None)
                 if len(new_name) >= 0 and len(new_name) <= 999999999:
                     if cpm.set_player_name(new_name):
                         print(Colorate.Horizontal(Colors.rainbow, 'УСПЕШНО'))
@@ -314,7 +314,7 @@ if __name__ == "__main__":
             elif service == 6: # Change Name Rainbow
                 print(Colorate.Horizontal(Colors.rainbow, '[?] Введите свое новое Радужное Имя.'))
                 new_name = Prompt.ask("[?] Name")
-                console.print("[%] Saving your data: ", end=None)
+                console.print("[%] Сохраняем процесс: ", end=None)
                 if len(new_name) >= 0 and len(new_name) <= 999999999:
                     if cpm.set_player_name(rainbow_gradient_string(new_name)):
                         print(Colorate.Horizontal(Colors.rainbow, 'УСПЕШНО'))
@@ -405,7 +405,7 @@ if __name__ == "__main__":
                     sleep(2)
                     continue
             elif service == 12: # Unlock All Cars
-                console.print("[%] Unlocking All Cars: ", end=None)
+                console.print("[%] Выдаю вам все авто: ", end=None)
                 if cpm.unlock_all_cars():
                     print(Colorate.Horizontal(Colors.rainbow, 'УСПЕШНО'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
@@ -448,7 +448,7 @@ if __name__ == "__main__":
                 if cpm.unlock_horns():
                     print(Colorate.Horizontal(Colors.rainbow, 'УСПЕШНО'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
+                    answ = Prompt.ask("[?] ВЫ хотите выйти ?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Спасибо за использование нашего инструмента, присоединяйтесь к нашему каналу в Telegram: @{__CHANNEL_USERNAME__}.'))
                     else: continue
                 else:
@@ -631,11 +631,11 @@ if __name__ == "__main__":
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.rainbow, 'ОШИБКА.'))
-                    print(Colorate.Horizontal(Colors.rainbow, '[!] Please use valid values.'))
+                    print(Colorate.Horizontal(Colors.rainbow, '[!] Пожалуйста, вводите правильные данные.'))
                     sleep(2)
                     continue
             elif service == 28: # ANGLE
-                print(Colorate.Horizontal(Colors.rainbow, '[!] ВВЕДИТЕ ДЕТАЛИ АВТО'))
+                print(Colorate.Horizontal(Colors.rainbow, '[!] ВВЕДИТЕ ДАННЫЕ АВТО'))
                 car_id = IntPrompt.ask("[red][?] АВТО ID[/red]")
                 print(Colorate.Horizontal(Colors.rainbow, '[!] ВВЕДИТЕ УГОЛ ПОВОРОТА РУЛЕВОГО КОЛЕСА'))
                 custom = IntPrompt.ask("[red][?]﻿ПРОЦЕСС[/red]")                
