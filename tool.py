@@ -618,39 +618,39 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.rainbow, '[!] Пожалуйста, вводите верные данные.'))
                     sleep(2)
                     continue
-            elif service == 27:
-                console.print("[bold yellow][!] Примечание[/bold yellow]: исходная скорость не может быть восстановлена!.")
-                console.print("[bold cyan][!] Введите данные автомобиля.[/bold cyan]")
-                car_id = IntPrompt.ask("[bold][?] Авто Id[/bold]")
-                console.print("[bold cyan][%] Взлом скорости автомобиля[/bold cyan]:",end=None)
-                if cpm.hack_car_speed(car_id):
-                    console.print("[bold green]УСПЕШНО (✔)[/bold green]")
-                    console.print("================================")
-                    answ = Prompt.ask("[?] Вы хотите выйти ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Спасибо за использование нашего инструмента, присоединяйтесь к нашему каналу в Telegram: @{__CHANNEL_USERNAME__}.'))
-                    else: continue
-                else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'ОШИБКА.'))
-                    print(Colorate.Horizontal(Colors.rainbow, '[!] Пожалуйста, вводите правильные данные.'))
-                    sleep(2)
-                    continue
-            elif service == 28: # ANGLE
-                print(Colorate.Horizontal(Colors.rainbow, '[!] ВВЕДИТЕ ДАННЫЕ АВТО'))
-                car_id = IntPrompt.ask("[red][?] АВТО ID[/red]")
-                print(Colorate.Horizontal(Colors.rainbow, '[!] ВВЕДИТЕ УГОЛ ПОВОРОТА РУЛЕВОГО КОЛЕСА'))
-                custom = IntPrompt.ask("[red][?]﻿ПРОЦЕСС[/red]")                
-                console.print("[red][%] ВЗЛОМ УГЛА АВТО[/red]: ", end=None)
-                if cpm.max_max1(car_id, custom):
-                    print(Colorate.Horizontal(Colors.rainbow, 'УСПЕШНО'))
-                    answ = Prompt.ask("[red][?] ВЫ ХОТИТЕ ВЫЙТИ?[/red] ?", choices=["y", "n"], default="n")
-                    if answ == "y": console.print("СПАСИБО ЗА ИСПОЛЬЗОВАНИЕ")
-                    else: continue
-                else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'ОШИБКА'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'ПОВТОРИТЕ ЕЩЕ РАЗ'))
-                    sleep(2)
-                    continue                                        
-            else: continue
+        #    elif service == 27:
+        #        console.print("[bold yellow][!] Примечание[/bold yellow]: исходная скорость не может быть восстановлена!.")
+        #        console.print("[bold cyan][!] Введите данные автомобиля.[/bold cyan]")
+        #        car_id = IntPrompt.ask("[bold][?] Авто Id[/bold]")
+        #        console.print("[bold cyan][%] Взлом скорости автомобиля[/bold cyan]:",end=None)
+        #        if cpm.hack_car_speed(car_id):
+        #            console.print("[bold green]УСПЕШНО (✔)[/bold green]")
+        #            console.print("================================")
+        #            answ = Prompt.ask("[?] Вы хотите выйти ?", choices=["y", "n"], default="n")
+         #           if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Спасибо за использование нашего инструмента, присоединяйтесь к нашему каналу в Telegram: @{__CHANNEL_USERNAME__}.'))
+        #            else: continue
+        #        else:
+        #            print(Colorate.Horizontal(Colors.rainbow, 'ОШИБКА.'))
+       #             print(Colorate.Horizontal(Colors.rainbow, '[!] Пожалуйста, вводите правильные данные.'))
+        #            sleep(2)
+     #               continue
+     #       elif service == 28: # ANGLE
+     #           print(Colorate.Horizontal(Colors.rainbow, '[!] ВВЕДИТЕ ДАННЫЕ АВТО'))
+     #           car_id = IntPrompt.ask("[red][?] АВТО ID[/red]")
+     #           print(Colorate.Horizontal(Colors.rainbow, '[!] ВВЕДИТЕ УГОЛ ПОВОРОТА РУЛЕВОГО КОЛЕСА'))
+     #           custom = IntPrompt.ask("[red][?]﻿ПРОЦЕСС[/red]")                
+     #           console.print("[red][%] ВЗЛОМ УГЛА АВТО[/red]: ", end=None)
+     #           if cpm.max_max1(car_id, custom):
+     #               print(Colorate.Horizontal(Colors.rainbow, 'УСПЕШНО'))
+     #               answ = Prompt.ask("[red][?] ВЫ ХОТИТЕ ВЫЙТИ?[/red] ?", choices=["y", "n"], default="n")
+     #               if answ == "y": console.print("СПАСИБО ЗА ИСПОЛЬЗОВАНИЕ")
+     #               else: continue
+     #           else:
+     #               print(Colorate.Horizontal(Colors.rainbow, 'ОШИБКА'))
+     #               print(Colorate.Horizontal(Colors.rainbow, 'ПОВТОРИТЕ ЕЩЕ РАЗ'))
+     #               sleep(2)
+     #               continue                                        
+     #       else: continue
             break
         break
             
