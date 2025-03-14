@@ -172,7 +172,7 @@ if __name__ == "__main__":
             load_player_data(cpm)
             load_key_data(cpm)
 #            load_client_details()
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28"]
+            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26"]
             print(Colorate.Horizontal(Colors.red_to_white, '{01}: Накрутка валюты          1.5K'))
             print(Colorate.Horizontal(Colors.red_to_white, '{02}: Накрутка коинов          4.5K'))
             print(Colorate.Horizontal(Colors.red_to_white, '{03}: Кинг Ранг                8K'))
