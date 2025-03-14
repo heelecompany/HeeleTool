@@ -109,14 +109,14 @@ def prompt_valid_value(content, tag, password=False):
         else:
             return value
             
-def load_client_details():
-    response = requests.get("http://ip-api.com/json")
-    data = response.json()
-    print(Colorate.Horizontal(Colors.red_to_white, '=============[ 𝐋𝐎𝐂𝐀𝐓𝐈𝐎𝐍 ]============='))
-    print(Colorate.Horizontal(Colors.red_to_white, f'Ip Адресс : {data.get("query")}.'))
-    print(Colorate.Horizontal(Colors.red_to_white, f'Локация   : {data.get("city")} {data.get("regionName")} {data.get("countryCode")}.'))
-    print(Colorate.Horizontal(Colors.red_to_white, f'Страна    : {data.get("country")} {data.get("zip")}.'))
-    print(Colorate.Horizontal(Colors.red_to_white, '===============[ 𝐌𝐄𝐍𝐔 ]==============='))
+#def load_client_details():
+#    response = requests.get("http://ip-api.com/json")
+#    data = response.json()
+#    print(Colorate.Horizontal(Colors.red_to_white, '=============[ 𝐋𝐎𝐂𝐀𝐓𝐈𝐎𝐍 ]============='))
+#    print(Colorate.Horizontal(Colors.red_to_white, f'Ip Адресс : {data.get("query")}.'))
+#    print(Colorate.Horizontal(Colors.red_to_white, f'Локация   : {data.get("city")} {data.get("regionName")} {data.get("countryCode")}.'))
+ #   print(Colorate.Horizontal(Colors.red_to_white, f'Страна    : {data.get("country")} {data.get("zip")}.'))
+#    print(Colorate.Horizontal(Colors.red_to_white, '===============[ 𝐌𝐄𝐍𝐔 ]==============='))
 
 def interpolate_color(start_color, end_color, fraction):
     start_rgb = tuple(int(start_color[i:i+2], 16) for i in (1, 3, 5))
@@ -199,8 +199,8 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.red_to_white, '{24}: Изменить Race Win        1K'))
             print(Colorate.Horizontal(Colors.red_to_white, '{25}: Изменить Race Loses      1K'))
             print(Colorate.Horizontal(Colors.red_to_white, '{26}: Клон Аккаунта            7K'))
-            print(Colorate.Horizontal(Colors.red_to_white, '{27}: Глитч авто               2.5k'))
-            print(Colorate.Horizontal(Colors.red_to_white, '{28}: Изм. выворота колеса     1.5k'))
+         #   print(Colorate.Horizontal(Colors.red_to_white, '{27}: Глитч авто               2.5k'))
+         #   print(Colorate.Horizontal(Colors.red_to_white, '{28}: Изм. выворота колеса     1.5k'))
             print(Colorate.Horizontal(Colors.red_to_white, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.red_to_white, '===============[ 𝐂𝐏𝐌 ]==============='))
@@ -335,7 +335,7 @@ if __name__ == "__main__":
             elif service == 7: # Number Plates
                 console.print("[%] Даем вам номерные знаки: ", end=None)
                 if cpm.set_player_plates():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'УСПЕШНО'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
                     answ = Prompt.ask("[?] Вы хоитите выйти ?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Спасибо за использование нашего инструмента, присоединяйтесь к нашему каналу в Telegram: @{__CHANNEL_USERNAME__}.'))
@@ -392,7 +392,7 @@ if __name__ == "__main__":
                     continue
             elif service == 11: # Unlock All Paid Cars
                 console.print("[!] Примечание: выполнение этой функции займет некоторое время, пожалуйста, не отменяйте ее..", end=None)
-                console.print("[%] Unlocking All Paid Cars: ", end=None)
+                console.print("[%] Разблокировка авто: ", end=None)
                 if cpm.unlock_paid_cars():
                     print(Colorate.Horizontal(Colors.rainbow, 'УСПЕШНО'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
@@ -405,7 +405,7 @@ if __name__ == "__main__":
                     sleep(2)
                     continue
             elif service == 12: # Unlock All Cars
-                console.print("[%] Выдаю вам все авто: ", end=None)
+                console.print("[%] Выдаю вам авто: ", end=None)
                 if cpm.unlock_all_cars():
                     print(Colorate.Horizontal(Colors.rainbow, 'УСПЕШНО'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
@@ -465,8 +465,8 @@ if __name__ == "__main__":
                     if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Спасибо за использование нашего инструмента, присоединяйтесь к нашему каналу в Telegram: @{__CHANNEL_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'ОШИБКА.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Повторите еще раз.'))
                     sleep(2)
                     continue
             elif service == 17: # Unlimited Fuel
